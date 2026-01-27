@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Digital Logic & Metaphysics</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Personal Website Joseph Bremer Joe Bremer Coding Coder Game Development Developer" name="keywords">
+    <meta content="Joseph Bremer's Personal Website." name="description">
+
+    <!-- Favicon -->
+    <link href="static/img/icon.ico" type="image/x-icon" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./static/css/style.css" rel="stylesheet">
+
+    <script src="static/js/main.js"></script>
+</head>
+
+
+<body id="body">
+    <div id="content">
+
+        <div class="star-background-l-1">
+            <div class="parallax star-background-l-2" -scroll-speed="0.85">
+                <div class="parallax star-background-l-3" -scroll-speed="0.65">
+                    <div class="parallax star-background-l-4" -scroll-speed="0.3">
+
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-lg-8">
+                                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                        <h1 class="title pb-3 mb-5">Digital Logic and Metaphysics</h1>
+                                        <p>
+                                            Throughout the past two weeks' classes, we have discussed computers'
+                                            fundamental
+                                            architecture, and how we might think of such low-level computation through a
+                                            metaphysical lens.
+
+                                            Below are circuit diagrams for a <i>2-Bit Adder</i> and a <i>2-Bit
+                                                Subtractor,</i>
+                                            both of which are simple logical circuits fundamental to digital
+                                            computation.
+
+                                            I'll then share my thoughts on low-level computation as it relates to
+                                            metaphysics,
+                                            and consider how we might think about computers through a metaphysical lens.
+                                        </p>
+                                    </section>
+
+                                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                        <h2 class="title pb-3 mb-5">2-Bit Adder</h2>
+                                        <div class="col-lg-8">
+                                            A <i>2-Bit Adder</i> is a simple circuit, consisting of 4 input bits, 3
+                                            output
+                                            bits, a <i>Half Adder</i>, and a <i>Full Adder</i>.
+
+                                            <br><br>
+
+                                            <ul>
+                                                <li><b>Input:</b> 4 bits.
+                                                    <ul>
+                                                        <li><b>X1</b>: The '1s place' bit of our 2-digit binary number
+                                                            X.</li>
+                                                        <li><b>X2</b>: The '2s place' bit of our 2-digit binary number
+                                                            X.</li>
+                                                        <li><b>Y1</b>: The '1s place' bit of our 2-digit binary number
+                                                            Y.</li>
+                                                        <li><b>Y2</b>: The '2s place' bit of our 2-digit binary number
+                                                            Y.</li>
+                                                    </ul>
+                                                </li>
+                                                <li><b>Half Adder:</b> Takes 2 input bits A, B. Outputs the sum and
+                                                    carry of X+Y.</li>
+                                                <li><b>Full Adder:</b> Takes 3 input bits A, B, C. Outputs the sum and
+                                                    carry of X+Y+C.</li>
+                                                <li><b>Output:</b> 3 bits, together representing the 3-digit sum of X+Y.
+                                                </li>
+                                            </ul>
+
+                                            <br><br>
+
+                                            Thus, the <i>Half Adder</i> calculates the first bit of the output and a
+                                            carry.
+                                            That carry, as well as the 2s places of X & Y, are sent to the <i>Full
+                                                Adder</i>, which then calculates bits two and three.
+
+                                        </div>
+
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                                        <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+                                        <svg class="diagram" width="200mm" height="297mm" viewBox="0 0 210 297"
+                                            version="1.1" id="svg1"
+                                            aria-label="Diagram demonstrating a 2-Bit adder, using a full adder (FA) and half adder (HA)."
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                            <defs id="defs1" />
+                                            <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+                                                <path class="fadein"
+                                                    style="font-size:14.1111px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                    d="m 58.272849,90.697281 h -1.364257 v -5.022945 h -5.119408 v 5.022945 H 50.424928 V 80.437794 h 1.364256 v 4.023869 h 5.119408 v -4.023869 h 1.364257 z m 11.109735,0 h -1.45383 l -1.005967,-2.859427 h -4.437279 l -1.005967,2.859427 h -1.384928 l 3.734481,-10.259487 h 1.819009 z m -2.880098,-4.030759 -1.798338,-5.036725 -1.805229,5.036725 z"
+                                                    id="text1" aria-label="Label reading 'HA'" />
+                                                <path class="fadein"
+                                                    style="font-size:14.1111px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                    d="m 136.11343,159.34407 h -5.1883 v 2.89388 h 4.45795 v 1.21267 h -4.45795 v 4.94026 h -1.36426 V 158.1314 h 6.55256 z m 9.22183,9.04681 h -1.45383 l -1.00597,-2.85942 h -4.43728 l -1.00596,2.85942 h -1.38493 l 3.73448,-10.25948 h 1.81901 z m -2.8801,-4.03075 -1.79834,-5.03673 -1.80523,5.03673 z"
+                                                    id="text1-5" aria-label="Label reading 'FA'" />
+                                                <path class="fadein"
+                                                    style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                    d="m 23.610515,12.121129 -1.593701,2.282032 1.590601,2.334741 H 22.89738 l -1.258837,-1.900659 -1.289844,1.900659 h -0.669727 l 1.609204,-2.306836 -1.571997,-2.309937 h 0.706934 l 1.243335,1.875855 1.27124,-1.875855 z m 3.833358,4.616773 H 24.9448 v -0.471289 h 0.961182 V 13.172228 H 24.9448 v -0.42168 q 0.195337,0 0.418579,-0.03101 0.223243,-0.03411 0.337964,-0.09612 0.142627,-0.07751 0.223242,-0.195337 0.08372,-0.120923 0.09612,-0.322461 h 0.48059 v 4.160987 h 0.942579 z"
+                                                    id="text1-3" aria-label="Label reading 'X1'" />
+                                                <path class="fadein"
+                                                    style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                    d="m 40.746698,12.121129 -1.593701,2.282032 1.5906,2.334741 h -0.710034 l -1.258838,-1.900659 -1.289843,1.900659 h -0.669727 l 1.609204,-2.306836 -1.571997,-2.309937 h 0.706934 l 1.243335,1.875855 1.27124,-1.875855 z m 4.096907,4.616773 h -3.12539 v -0.648023 q 0.325561,-0.279052 0.651123,-0.558105 0.328662,-0.279053 0.610815,-0.555005 0.595313,-0.576709 0.815454,-0.914673 0.220142,-0.341064 0.220142,-0.734839 0,-0.359668 -0.238745,-0.561206 -0.235645,-0.204639 -0.660425,-0.204639 -0.282153,0 -0.610816,0.09922 -0.328662,0.09922 -0.641821,0.303858 h -0.03101 v -0.651123 q 0.220142,-0.108521 0.586011,-0.198438 0.36897,-0.08992 0.713135,-0.08992 0.710034,0 1.11311,0.344165 0.403076,0.341065 0.403076,0.927075 0,0.26355 -0.06821,0.492994 -0.06511,0.226342 -0.195337,0.430981 -0.120922,0.192236 -0.285253,0.378271 -0.161231,0.186036 -0.393775,0.412378 -0.331763,0.325562 -0.685229,0.63252 -0.353467,0.303857 -0.660425,0.564307 h 2.483569 z"
+                                                    id="text1-3-9" aria-label="Label reading 'X2'" />
+                                                <path class="fadein"
+                                                    style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                    d="m 170.29728,12.121129 -1.6247,2.59209 v 2.024683 h -0.61392 v -1.959571 l -1.63091,-2.657202 h 0.67903 l 1.26194,2.06499 1.27434,-2.06499 z m 3.64422,4.616773 h -2.49907 v -0.471289 h 0.96118 v -3.094385 h -0.96118 v -0.42168 q 0.19534,0 0.41858,-0.03101 0.22324,-0.03411 0.33797,-0.09612 0.14262,-0.07751 0.22324,-0.195337 0.0837,-0.120923 0.0961,-0.322461 h 0.48059 v 4.160987 h 0.94257 z"
+                                                    id="text1-3-2" aria-label="Label reading 'Y1'" />
+                                                <path class="fadein"
+                                                    style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                    d="m 187.43347,12.121129 -1.62471,2.59209 v 2.024683 h -0.61392 v -1.959571 l -1.6309,-2.657202 h 0.67902 l 1.26194,2.06499 1.27434,-2.06499 z m 3.90777,4.616773 h -3.12539 v -0.648023 q 0.32556,-0.279052 0.65112,-0.558105 0.32866,-0.279053 0.61082,-0.555005 0.59531,-0.576709 0.81545,-0.914673 0.22014,-0.341064 0.22014,-0.734839 0,-0.359668 -0.23874,-0.561206 -0.23565,-0.204639 -0.66043,-0.204639 -0.28215,0 -0.61081,0.09922 -0.32866,0.09922 -0.64182,0.303858 h -0.031 v -0.651123 q 0.22014,-0.108521 0.58601,-0.198438 0.36897,-0.08992 0.71314,-0.08992 0.71003,0 1.11311,0.344165 0.40307,0.341065 0.40307,0.927075 0,0.26355 -0.0682,0.492994 -0.0651,0.226342 -0.19534,0.430981 -0.12092,0.192236 -0.28525,0.378271 -0.16123,0.186036 -0.39378,0.412378 -0.33176,0.325562 -0.68523,0.63252 -0.35346,0.303857 -0.66042,0.564307 h 2.48357 z"
+                                                    id="text1-3-9-3" aria-label="Label reading 'Y2'" />
+
+
+                                                <path class="drawline drawline-r1"
+                                                    d="m 187.45259,22.73337 c 0,63.053022 -35.81546,63.053022 -35.81546,123.60605"
+                                                    id="path7" sodipodi:nodetypes="cc" inkscape:label="y2 - fa" />
+                                                <path class="drawline drawline-r1"
+                                                    d="m 23.561422,25.534481 c 0,0 -2.33691,19.056707 11.410937,18.977635 13.747847,-0.07907 12.651757,23.633699 12.651757,23.633699"
+                                                    id="path4" sodipodi:nodetypes="czc" inkscape:label="X1 - HA" />
+                                                <path class="drawline drawline-r1"
+                                                    d="m 40.82938,25.233365 c 0,21.107396 96.61868,59.30303 96.61868,121.106055"
+                                                    id="path4-5" sodipodi:nodetypes="cc" inkscape:label="X2 - FA" />
+                                                <path class="drawline drawline-r2"
+                                                    d="m 69.882584,102.48926 c 0,0 -3.002823,21.63848 26.206477,21.63848 29.209299,0 25.354829,22.21168 25.354829,22.21168"
+                                                    id="path5" sodipodi:nodetypes="czc" inkscape:label="Ha - FA" />
+                                                <path id="path6"
+                                                    style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                    inkscape:label="Shadow 5"
+                                                    d="m 81.328235,60.310356 a 4.7499881,4.7499881 0 0 1 -4.749988,4.749988 4.7499881,4.7499881 0 0 1 -4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,4.749988 z" />
+                                                <path id="path6-7"
+                                                    style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                    inkscape:label="Shadow 4"
+                                                    d="m 52.113166,67.685051 a 4.7499881,4.7499881 0 0 1 -4.749988,4.749988 4.7499881,4.7499881 0 0 1 -4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,4.749988 z" />
+                                                <path class="drawline drawline-r1"
+                                                    d="m 170.18463,23.034486 c 0,0 4.25687,23.805662 -45.97047,23.805662 -50.227354,0 -52.030758,21.305667 -52.030758,21.305667"
+                                                    id="path4-4" sodipodi:nodetypes="czc" inkscape:label="Y1 - HA" />
+                                                <path id="path6-7-4"
+                                                    style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                    inkscape:label="Shadow 3"
+                                                    d="m 77.492054,67.796875 a 4.7499881,4.7499881 0 0 1 -4.749989,4.749988 4.7499881,4.7499881 0 0 1 -4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749989,4.749988 z" />
+                                                <path id="path6-7-4-0-1-6"
+                                                    style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                    inkscape:label="Shadow 2"
+                                                    d="m 141.86255,145.29317 a 4.7499881,4.7499881 0 0 1 -4.74999,4.74999 4.7499881,4.7499881 0 0 1 -4.74998,-4.74999 4.7499881,4.7499881 0 0 1 4.74998,-4.74999 4.7499881,4.7499881 0 0 1 4.74999,4.74999 z" />
+                                                <path id="path6-7-4-0-1-6-2"
+                                                    style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                    inkscape:label="Shadow 1"
+                                                    d="m 157.1521,143.83942 a 4.7499881,4.7499881 0 0 1 -4.74999,4.74998 4.7499881,4.7499881 0 0 1 -4.74998,-4.74998 4.7499881,4.7499881 0 0 1 4.74998,-4.74999 4.7499881,4.7499881 0 0 1 4.74999,4.74999 z" />
+
+                                                <path class="drawline drawline-r3"
+                                                    d="m 145.83526,180.92013 c 0,33.83678 -8.99513,33.83678 -8.99513,68.41083"
+                                                    id="path9" sodipodi:nodetypes="cc" inkscape:label="FA - Bulb 3" />
+                                                <path class="drawline drawline-r3"
+                                                    d="M 128.41533,180.18287 C 128.41533,215.12555 105,215.12555 105,249.33096"
+                                                    id="path10" sodipodi:nodetypes="cc" inkscape:label="FA - Bulb 2" />
+                                                <path class="drawline drawline-r3"
+                                                    d="m 49.924927,102.47923 c 0,75.20365 23.234935,75.20365 23.234935,146.85173"
+                                                    id="path11" sodipodi:nodetypes="cc" inkscape:label="Ha - Bulb 1" />
+                                                <path id="path8" class="drawline drawline-r4" inkscape:label="Bulb 1"
+                                                    transform="translate(10.886698,30.047922)"
+                                                    d="m 72.267459,229.27733 a 9.9942923,9.9942923 0 0 1 -9.994292,9.99429 9.9942923,9.9942923 0 0 1 -9.994293,-9.99429 9.9942923,9.9942923 0 0 1 9.994293,-9.99429 9.9942923,9.9942923 0 0 1 9.994292,9.99429 z" />
+                                                <path id="path8-3" class="drawline drawline-r4" inkscape:label="Bulb 2"
+                                                    transform="translate(10.886698,30.047922)"
+                                                    d="m 104.1076,229.27733 a 9.9942923,9.9942923 0 0 1 -9.994296,9.99429 9.9942923,9.9942923 0 0 1 -9.994292,-9.99429 9.9942923,9.9942923 0 0 1 9.994292,-9.99429 9.9942923,9.9942923 0 0 1 9.994296,9.99429 z" />
+                                                <path id="path8-3-5" class="drawline drawline-r4"
+                                                    inkscape:label="Bulb 3" transform="translate(10.886698,30.047922)"
+                                                    d="m 135.94773,229.27733 a 9.9942923,9.9942923 0 0 1 -9.99429,9.99429 9.9942923,9.9942923 0 0 1 -9.99429,-9.99429 9.9942923,9.9942923 0 0 1 9.99429,-9.99429 9.9942923,9.9942923 0 0 1 9.99429,9.99429 z" />
+                                                <path id="rect1-2-4" class="drawbox drawline-r2"
+                                                    d="m 111.46837,146.33942 h 51.95938 v 33.84345 h -51.95938 z"
+                                                    sodipodi:nodetypes="ccccc" inkscape:label="Full Adder" />
+                                                <path id="rect1" class="drawbox drawline-r2"
+                                                    d="M 42.982033,68.645813 H 76.825481 V 102.48926 H 42.982033 Z"
+                                                    inkscape:label="Half Adder" />
+                                            </g>
+                                        </svg>
+                                </div>
+                                </section>
+
+                                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                    <h2 class="title pb-3 mb-5">2-Bit Subtractor</h2>
+                                    <div class="col-lg-8">
+                                        The <b>2-Bit Subtractor</b> circuit follows precisely the same layout as the
+                                        <b>2-Bit
+                                            Adder</b>, save for the use of a <i>Half Subtractor</i> and a <i>Full
+                                            Subtractor</i> instead of a <i>Half Adder</i> and a <i>Full Adder</i>.
+                                        <br><br>
+                                        This layout also functions near-identically to the <b>2-Bit Adder</b>, with
+                                        'borrow' bits
+                                        instead of carry bits.
+                                        <br><br>
+                                        Additionally, there are only 2 output bits; the borrow bit leading out from the
+                                        <i>Full Subtractor</i> goes
+                                        unused.
+                                        This is because that borrow bit would only be activated if the 'Y' input was
+                                        greater than the 'X' input, a
+                                        scenario which this 2-bit subtractor does not account for. (It operates under
+                                        the assumption that X > Y).
+                                    </div>
+
+                                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                                    <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+                                    <svg class="diagram" width="200mm" height="297mm" viewBox="0 0 210 297"
+                                        version="1.1" id="svg1"
+                                        aria-label="Diagram demonstrating a 2-Bit subtractor, using a full subtractor (FS) and half subtractor (HS)."
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                        <defs id="defs1" />
+                                        <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+                                            <path class="fadein"
+                                                style="font-size:14.1111px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m 58.272849,90.697281 h -1.364257 v -5.022945 h -5.119408 v 5.022945 H 50.424928 V 80.437794 h 1.364256 v 4.023869 h 5.119408 v -4.023869 h 1.364257 z m 10.475837,-2.928329 q 0,0.599446 -0.282497,1.185112 -0.275608,0.585666 -0.778591,0.992187 -0.551215,0.440972 -1.288465,0.689018 -0.730359,0.248047 -1.763887,0.248047 -1.10932,0 -1.998154,-0.206706 -0.881944,-0.206705 -1.798339,-0.613226 v -1.708766 h 0.09646 q 0.778591,0.647677 1.798338,0.999077 1.019748,0.351399 1.915472,0.351399 1.267794,0 1.970593,-0.475423 0.709689,-0.475422 0.709689,-1.267794 0,-0.682128 -0.337619,-1.005967 -0.330729,-0.323839 -1.012857,-0.502983 -0.516764,-0.137804 -1.1231,-0.227377 -0.599447,-0.08957 -1.274685,-0.227376 -1.364256,-0.289388 -2.025714,-0.985296 -0.654568,-0.702799 -0.654568,-1.825899 0,-1.288465 1.088649,-2.108397 1.08865,-0.826823 2.762965,-0.826823 1.081759,0 1.984373,0.206706 0.902615,0.206706 1.598523,0.509874 v 1.612303 h -0.09646 q -0.585666,-0.496093 -1.543402,-0.819932 -0.950845,-0.330729 -1.949922,-0.330729 -1.09554,0 -1.763888,0.454752 -0.661458,0.454753 -0.661458,1.171332 0,0.640787 0.330729,1.005967 0.330729,0.36518 1.164442,0.558105 0.440971,0.09646 1.254013,0.234266 0.813042,0.137804 1.378037,0.282498 1.143771,0.303168 1.722547,0.916395 0.578775,0.613226 0.578776,1.715656 z"
+                                                id="text1" aria-label="HS" />
+                                            <path class="fadein"
+                                                style="font-size:14.1111px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m 135.76893,159.34407 h -5.18831 v 2.89388 h 4.45795 v 1.21267 h -4.45795 v 4.94026 h -1.36426 V 158.1314 h 6.55257 z m 9.27694,6.11849 q 0,0.59944 -0.2825,1.18511 -0.2756,0.58566 -0.77859,0.99218 -0.55121,0.44098 -1.28846,0.68902 -0.73036,0.24805 -1.76389,0.24805 -1.10932,0 -1.99815,-0.20671 -0.88195,-0.2067 -1.79834,-0.61322 v -1.70877 h 0.0965 q 0.77859,0.64768 1.79834,0.99908 1.01975,0.3514 1.91547,0.3514 1.2678,0 1.97059,-0.47543 0.70969,-0.47542 0.70969,-1.26779 0,-0.68213 -0.33762,-1.00597 -0.33072,-0.32384 -1.01285,-0.50298 -0.51677,-0.1378 -1.1231,-0.22738 -0.59945,-0.0896 -1.27469,-0.22737 -1.36425,-0.28939 -2.02571,-0.9853 -0.65457,-0.7028 -0.65457,-1.8259 0,-1.28846 1.08865,-2.10839 1.08865,-0.82683 2.76296,-0.82683 1.08176,0 1.98438,0.20671 0.90261,0.2067 1.59852,0.50987 v 1.61231 h -0.0965 q -0.58567,-0.4961 -1.5434,-0.81994 -0.95085,-0.33073 -1.94993,-0.33073 -1.09554,0 -1.76388,0.45476 -0.66146,0.45475 -0.66146,1.17133 0,0.64079 0.33073,1.00597 0.33073,0.36518 1.16444,0.5581 0.44097,0.0965 1.25401,0.23427 0.81304,0.1378 1.37804,0.28249 1.14377,0.30317 1.72255,0.9164 0.57877,0.61323 0.57877,1.71566 z"
+                                                id="text1-5" aria-label="FS" />
+                                            <path class="fadein"
+                                                style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m 23.610515,12.121129 -1.593701,2.282032 1.590601,2.334741 H 22.89738 l -1.258837,-1.900659 -1.289844,1.900659 h -0.669727 l 1.609204,-2.306836 -1.571997,-2.309937 h 0.706934 l 1.243335,1.875855 1.27124,-1.875855 z m 3.833358,4.616773 H 24.9448 v -0.471289 h 0.961182 V 13.172228 H 24.9448 v -0.42168 q 0.195337,0 0.418579,-0.03101 0.223243,-0.03411 0.337964,-0.09612 0.142627,-0.07751 0.223242,-0.195337 0.08372,-0.120923 0.09612,-0.322461 h 0.48059 v 4.160987 h 0.942579 z"
+                                                id="text1-3" aria-label="Label reading 'X1'" />
+                                            <path class="fadein"
+                                                style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m 40.746698,12.121129 -1.593701,2.282032 1.5906,2.334741 h -0.710034 l -1.258838,-1.900659 -1.289843,1.900659 h -0.669727 l 1.609204,-2.306836 -1.571997,-2.309937 h 0.706934 l 1.243335,1.875855 1.27124,-1.875855 z m 4.096907,4.616773 h -3.12539 v -0.648023 q 0.325561,-0.279052 0.651123,-0.558105 0.328662,-0.279053 0.610815,-0.555005 0.595313,-0.576709 0.815454,-0.914673 0.220142,-0.341064 0.220142,-0.734839 0,-0.359668 -0.238745,-0.561206 -0.235645,-0.204639 -0.660425,-0.204639 -0.282153,0 -0.610816,0.09922 -0.328662,0.09922 -0.641821,0.303858 h -0.03101 v -0.651123 q 0.220142,-0.108521 0.586011,-0.198438 0.36897,-0.08992 0.713135,-0.08992 0.710034,0 1.11311,0.344165 0.403076,0.341065 0.403076,0.927075 0,0.26355 -0.06821,0.492994 -0.06511,0.226342 -0.195337,0.430981 -0.120922,0.192236 -0.285253,0.378271 -0.161231,0.186036 -0.393775,0.412378 -0.331763,0.325562 -0.685229,0.63252 -0.353467,0.303857 -0.660425,0.564307 h 2.483569 z"
+                                                id="text1-3-9" aria-label="Label reading 'X2'" />
+                                            <path class="fadein"
+                                                style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m 170.29728,12.121129 -1.6247,2.59209 v 2.024683 h -0.61392 v -1.959571 l -1.63091,-2.657202 h 0.67903 l 1.26194,2.06499 1.27434,-2.06499 z m 3.64422,4.616773 h -2.49907 v -0.471289 h 0.96118 v -3.094385 h -0.96118 v -0.42168 q 0.19534,0 0.41858,-0.03101 0.22324,-0.03411 0.33797,-0.09612 0.14262,-0.07751 0.22324,-0.195337 0.0837,-0.120923 0.0961,-0.322461 h 0.48059 v 4.160987 h 0.94257 z"
+                                                id="text1-3-2" aria-label="Label reading 'Y1'" />
+                                            <path class="fadein"
+                                                style="font-size:6.35px;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0.264583px;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m 187.43347,12.121129 -1.62471,2.59209 v 2.024683 h -0.61392 v -1.959571 l -1.6309,-2.657202 h 0.67902 l 1.26194,2.06499 1.27434,-2.06499 z m 3.90777,4.616773 h -3.12539 v -0.648023 q 0.32556,-0.279052 0.65112,-0.558105 0.32866,-0.279053 0.61082,-0.555005 0.59531,-0.576709 0.81545,-0.914673 0.22014,-0.341064 0.22014,-0.734839 0,-0.359668 -0.23874,-0.561206 -0.23565,-0.204639 -0.66043,-0.204639 -0.28215,0 -0.61081,0.09922 -0.32866,0.09922 -0.64182,0.303858 h -0.031 v -0.651123 q 0.22014,-0.108521 0.58601,-0.198438 0.36897,-0.08992 0.71314,-0.08992 0.71003,0 1.11311,0.344165 0.40307,0.341065 0.40307,0.927075 0,0.26355 -0.0682,0.492994 -0.0651,0.226342 -0.19534,0.430981 -0.12092,0.192236 -0.28525,0.378271 -0.16123,0.186036 -0.39378,0.412378 -0.33176,0.325562 -0.68523,0.63252 -0.35346,0.303857 -0.66042,0.564307 h 2.48357 z"
+                                                id="text1-3-9-3" aria-label="Label reading 'Y2'" />
+
+
+                                            <path class="drawline drawline-r1"
+                                                d="m 187.45259,22.73337 c 0,63.053022 -35.81546,63.053022 -35.81546,123.60605"
+                                                id="path7" sodipodi:nodetypes="cc" inkscape:label="y2 - fa" />
+                                            <path class="drawline drawline-r1"
+                                                d="m 23.561422,25.534481 c 0,0 -2.33691,19.056707 11.410937,18.977635 13.747847,-0.07907 12.651757,23.633699 12.651757,23.633699"
+                                                id="path4" sodipodi:nodetypes="czc" inkscape:label="X1 - HA" />
+                                            <path class="drawline drawline-r1"
+                                                d="m 40.82938,25.233365 c 0,21.107396 96.61868,59.30303 96.61868,121.106055"
+                                                id="path4-5" sodipodi:nodetypes="cc" inkscape:label="X2 - FA" />
+                                            <path class="drawline drawline-r2"
+                                                d="m 69.882584,102.48926 c 0,0 -3.002823,21.63848 26.206477,21.63848 29.209299,0 25.354829,22.21168 25.354829,22.21168"
+                                                id="path5" sodipodi:nodetypes="czc" inkscape:label="Ha - FA" />
+                                            <path id="path6"
+                                                style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                inkscape:label="Shadow 5"
+                                                d="m 81.328235,60.310356 a 4.7499881,4.7499881 0 0 1 -4.749988,4.749988 4.7499881,4.7499881 0 0 1 -4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,4.749988 z" />
+                                            <path id="path6-7"
+                                                style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                inkscape:label="Shadow 4"
+                                                d="m 52.113166,67.685051 a 4.7499881,4.7499881 0 0 1 -4.749988,4.749988 4.7499881,4.7499881 0 0 1 -4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,4.749988 z" />
+                                            <path class="drawline drawline-r1"
+                                                d="m 170.18463,23.034486 c 0,0 4.25687,23.805662 -45.97047,23.805662 -50.227354,0 -52.030758,21.305667 -52.030758,21.305667"
+                                                id="path4-4" sodipodi:nodetypes="czc" inkscape:label="Y1 - HA" />
+                                            <path id="path6-7-4"
+                                                style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                inkscape:label="Shadow 3"
+                                                d="m 77.492054,67.796875 a 4.7499881,4.7499881 0 0 1 -4.749989,4.749988 4.7499881,4.7499881 0 0 1 -4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749988,-4.749988 4.7499881,4.7499881 0 0 1 4.749989,4.749988 z" />
+                                            <path id="path6-7-4-0-1-6"
+                                                style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                inkscape:label="Shadow 2"
+                                                d="m 141.86255,145.29317 a 4.7499881,4.7499881 0 0 1 -4.74999,4.74999 4.7499881,4.7499881 0 0 1 -4.74998,-4.74999 4.7499881,4.7499881 0 0 1 4.74998,-4.74999 4.7499881,4.7499881 0 0 1 4.74999,4.74999 z" />
+                                            <path id="path6-7-4-0-1-6-2"
+                                                style="fill-opacity:0.195343;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
+                                                inkscape:label="Shadow 1"
+                                                d="m 157.1521,143.83942 a 4.7499881,4.7499881 0 0 1 -4.74999,4.74998 4.7499881,4.7499881 0 0 1 -4.74998,-4.74998 4.7499881,4.7499881 0 0 1 4.74998,-4.74999 4.7499881,4.7499881 0 0 1 4.74999,4.74999 z" />
+
+                                            <path class="drawline drawline-r3"
+                                                d="M 128.41533,180.18287 C 128.41533,215.12555 105,215.12555 105,249.33096"
+                                                id="path10" sodipodi:nodetypes="cc" inkscape:label="FA - Bulb 2" />
+                                            <path class="drawline drawline-r3"
+                                                d="m 49.924927,102.47923 c 0,75.20365 23.234935,75.20365 23.234935,146.85173"
+                                                id="path11" sodipodi:nodetypes="cc" inkscape:label="Ha - Bulb 1" />
+                                            <path id="path8" class="drawline drawline-r4" inkscape:label="Bulb 1"
+                                                transform="translate(10.886698,30.047922)"
+                                                d="m 72.267459,229.27733 a 9.9942923,9.9942923 0 0 1 -9.994292,9.99429 9.9942923,9.9942923 0 0 1 -9.994293,-9.99429 9.9942923,9.9942923 0 0 1 9.994293,-9.99429 9.9942923,9.9942923 0 0 1 9.994292,9.99429 z" />
+                                            <path id="path8-3" class="drawline drawline-r4" inkscape:label="Bulb 2"
+                                                transform="translate(10.886698,30.047922)"
+                                                d="m 104.1076,229.27733 a 9.9942923,9.9942923 0 0 1 -9.994296,9.99429 9.9942923,9.9942923 0 0 1 -9.994292,-9.99429 9.9942923,9.9942923 0 0 1 9.994292,-9.99429 9.9942923,9.9942923 0 0 1 9.994296,9.99429 z" />
+                                            <path id="rect1-2-4" class="drawbox drawline-r2"
+                                                d="m 111.46837,146.33942 h 51.95938 v 33.84345 h -51.95938 z"
+                                                sodipodi:nodetypes="ccccc" inkscape:label="Full Adder" />
+                                            <path id="rect1" class="drawbox drawline-r2"
+                                                d="M 42.982033,68.645813 H 76.825481 V 102.48926 H 42.982033 Z"
+                                                inkscape:label="Half Adder" />
+                                        </g>
+                                    </svg>
+                            </div>
+                            </section>
+
+                            <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="title pb-3 mb-5">Metaphysics</h2>
+                                <p>
+                                    In class, we discussed what one might consider a computer, (or what one might
+                                    consider <i>not</i> to be a computer).
+                                    A question that particularly highlighted this dilemma was the following: "is a
+                                    computer that is turned off still a computer?
+                                    What about a computer that is broken?"<br><br>
+
+                                    The immediate issue is this: we are already presuming that the "not-computer" we're
+                                    talking about
+                                    is, at least in some regard, a computer; (the question refers to this not-computer
+                                    <i>as a computer</i>).
+                                    In class, we reached the conclusion that there must be <i>two</i> definitions of a
+                                    computer, (or perhaps more):
+                                    a colloquial definition of a computer, and a strict, mathematical definition of a
+                                    computer.
+                                    Perhaps, from the mathematical angle, a broken computer is <i>not</i> a computer.
+                                    But if I were to say
+                                    "I'm getting my computer fixed over the weekend," you wouldn't be confused by the
+                                    notion
+                                    of a "broken computer."<br><br>
+
+                                    This distinction resolves the issues proposed by the readings. Is a computer made of
+                                    crabs a computer?
+                                    What about a set of ropes and pullies? What if a slime mold was involved? All of
+                                    these examples certainly
+                                    have 'computery' properties, but fail to live up to the prototypical definition that
+                                    we live by in the day-to-day.<br><br>
+
+                                    Perhaps even the simple circuits shown above are, in a sense, 'computers.' But they
+                                    are
+                                    most certainly not 'computer computers;' they are not what most people <i>think
+                                        of</i> as
+                                    computers.<br><br>
+                                </p>
+
+                                <small><b>Works Cited:</b><br><br><br>
+                                    An ancient rope-and-pulley computer is unearthed in the jungle of apraphul. (1995).
+                                    Humour the Computer. https://doi.org/10.7551/mitpress/3615.003.0054 <br><br>
+                                    Gunji, Y.-P., Nishiyama, Y., Adamatzky, A., Simos, T. E., Psihoyios, G., Tsitouras,
+                                    Ch., & Anastassi, Z. (2011). Robust soldier Crab Ball Gate. AIP Conference
+                                    Proceedings, 995–998. https://doi.org/10.1063/1.3637777 <br><br>
+                                    Lu, J., & Lopes, P. (2022). Integrating living organisms in devices to implement
+                                    care-based interactions. Proceedings of the 35th Annual ACM Symposium on User
+                                    Interface Software and Technology, 1–13. https://doi.org/10.1145/3526113.3545629<br>
+                                </small>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="static/lib/wow/wow.min.js"></script>
+    <script src="static/lib/typed/typed.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/counterup/counterup.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/jq.js"></script>
+</body>
+
+</html>

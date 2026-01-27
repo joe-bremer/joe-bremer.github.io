@@ -27,7 +27,7 @@
   --bs-primary: #8a8fc4;
   --bs-secondary: #1c1618;
   --bs-success: #6c8c50;
-  --bs-info: #e3d245;
+  --bs-info: #acafe6;
   --bs-warning: #d88038;
   --bs-danger: #a13d3b;
   --bs-light: #f9f5ef;
@@ -35,7 +35,7 @@
   --bs-primary-rgb: 138, 143, 196;
   --bs-secondary-rgb: 28, 22, 24;
   --bs-success-rgb: 108, 140, 80;
-  --bs-info-rgb: 227, 210, 69;
+  --bs-info-rgb: 172, 175, 230;
   --bs-warning-rgb: 216, 128, 56;
   --bs-danger-rgb: 161, 61, 59;
   --bs-light-rgb: 249, 245, 239;
@@ -88,11 +88,11 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #f0d472;
-  --bs-link-color-rgb: 240, 212, 114;
+  --bs-link-color: #c3c5e9;
+  --bs-link-color-rgb: 195, 197, 233;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: rgb(192, 169.6, 91.2);
-  --bs-link-hover-color-rgb: 192, 170, 91;
+  --bs-link-hover-color: rgb(156, 157.6, 186.4);
+  --bs-link-hover-color-rgb: 156, 158, 186;
   --bs-code-color: #d63384;
   --bs-highlight-color: #b4b4b4;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
@@ -1925,8 +1925,8 @@ progress {
   text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-info:hover, .link-info:focus {
-  color: RGBA(233, 219, 106, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(233, 219, 106, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(189, 191, 235, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(189, 191, 235, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-warning {
@@ -6955,15 +6955,95 @@ progress {
     display: none !important;
   }
 }
-.star-parallax {
-  /* Set a specific height */
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.drawline {
+  stroke: #8a8fc4;
+  stroke-width: 3px;
+  stroke-opacity: 1;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: draw 2s linear forwards;
+  animation-timeline: view();
+}
+
+.drawbox {
+  stroke: #f9f5ef;
+  stroke-width: 3px;
+  stroke-opacity: 1;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: draw 2s linear forwards;
+  animation-timeline: view();
+}
+
+.fadein {
+  opacity: 0;
+  animation: fadein 2s linear forwards;
+  animation-timeline: view();
+  animation-range: 55vh 85vh;
+}
+
+.drawline-r1 {
+  animation-range: 25vh 80vh;
+}
+
+.drawline-r2 {
+  animation-range: 30vh 85vh;
+}
+
+.drawline-r3 {
+  animation-range: 32vh 87vh;
+}
+
+.drawline-r4 {
+  animation-range: 32vh 87vh;
+}
+
+.parallax {
+  background-position: top center;
+  background-attachment: scroll;
   background-size: 100%;
-  /* The image used */
-  background-image: url("../img/stars.png");
+  background-repeat: repeat;
+}
+
+.star-background-l-0 {
+  background-image: url("../img/bkg/stars-l-0.png");
+}
+
+.star-background-l-1 {
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-image: url("../img/bkg/stars-l-1.png");
+}
+
+.star-background-l-2 {
+  background-image: url("../img/bkg/stars-l-2.png");
+}
+
+.star-background-l-3 {
+  background-image: url("../img/bkg/stars-l-3.png");
+}
+
+.star-background-l-4 {
+  background-image: url("../img/bkg/stars-l-4.png");
 }
 
 /*# sourceMappingURL=style.css.map */

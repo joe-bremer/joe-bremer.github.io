@@ -6,20 +6,19 @@
 $body-bg: #040303FF;
 $body-color: #b4b4b4;
 
-$link-color: #f0d472;
+$link-color: #c3c5e9;
 
 $theme-colors: (
-    "primary":  #8a8fc4,
+    "primary": #8a8fc4,
     "secondary": #1c1618,
     "success": #6c8c50,
-    "info": #e3d245,
+    "info": #acafe6,
     "warning": #d88038,
     "danger": #a13d3b,
     "light": #f9f5ef,
-    "dark": #040303);
+    "dark": #040303
+);
 
-$font-stack: Helvetica,
-    sans-serif;
 // default variable overrides ^^^
 
 // remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
@@ -42,21 +41,110 @@ $font-stack: Helvetica,
 
 @import "../node_modules/bootstrap/scss/utilities/api";
 
-@mixin parallax {
-    /* Set a specific height */
-    //height: 500px;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
-.star-parallax {
-    @include parallax(
-);
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
 
-/* The image used */
-background-image: url('../img/stars.png');
+    to {
+        opacity: 1;
+    }
+}
+
+.diagram {
+    //display: block;
+    //margin: auto;
+    //Swidth: 80%;
+}
+
+.drawline {
+    stroke: #8a8fc4;
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: draw 2s linear forwards;
+    animation-timeline: view();
+    
+}
+
+.drawbox {
+    stroke: #f9f5ef;
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: draw 2s linear forwards;
+    animation-timeline: view();
+    
+}
+
+.fadein {
+    opacity: 0;
+    animation: fadein 2s linear forwards;
+    animation-timeline: view();
+    animation-range: 55vh 85vh;
+}
+
+.drawline-r1 {
+    animation-range: 25vh 80vh;
+}
+
+.drawline-r2 {
+    animation-range: 30vh 85vh;
+}
+
+.drawline-r3 {
+    animation-range: 32vh 87vh;
+}
+
+.drawline-r4 {
+    animation-range: 32vh 87vh;
+}
+
+
+
+
+
+
+.parallax {
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+.star-background-l-0 {
+    background-image: url('../img/bkg/stars-l-0.png');
+}
+
+.star-background-l-1 {
+    background-position: top center;
+    background-attachment:fixed;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-image: url('../img/bkg/stars-l-1.png');
+}
+
+.star-background-l-2 {
+    background-image: url('../img/bkg/stars-l-2.png');
+}
+
+.star-background-l-3 {
+    background-image: url('../img/bkg/stars-l-3.png');
+}
+
+.star-background-l-4 {
+    background-image: url('../img/bkg/stars-l-4.png');
 }
